@@ -1,0 +1,331 @@
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+figure,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Variáveis */
+:root {
+  --background: #f5f4f0;
+  --text-primary: #1b1b1b;
+  --text-secondary: #333333;
+  --text-muted: #696969;
+  --border: #d9d9d9;
+  --accent: #e1624f;
+  --history: #0c51a7;
+  --couples: #591b98;
+  --family: #e5245e;
+  --budget: #e95e10;
+  --container-width: 1120px;
+}
+
+/* Estilos globais */
+body {
+  min-width: 320px;
+  background-color: var(--background);
+  color: var(--text-secondary);
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/* Layout */
+.page {
+  width: calc(100% - 64px);
+  max-width: var(--container-width);
+  margin: 88px auto 0;
+}
+
+/* Imagens */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Tipografia */
+h1,
+h2,
+h3 {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 1.35;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 1.35;
+}
+
+h3 {
+  font-size: 28px;
+  line-height: 1.35;
+}
+
+p {
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+h1,
+h2,
+h3,
+p,
+li {
+  overflow-wrap: break-word;
+}
+
+/* Preparação para as próximas etapas */
+.eyebrow {
+  color: var(--accent);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Hero */
+.hero {
+  margin-bottom: 40px;
+}
+
+.hero .eyebrow {
+  margin-bottom: 8px;
+}
+
+.hero__figure {
+  margin-top: 40px;
+}
+
+.hero__image {
+  width: 100%;
+  height: 660px;
+  border-radius: 28px;
+  object-fit: cover;
+}
+
+figcaption {
+  margin-top: 24px;
+  color: var(--text-muted);
+  font-style: italic;
+  text-align: center;
+}
+
+.divider {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 40px 0 64px;
+}
+
+/* Destinos */
+.destinations__intro {
+  margin-bottom: 64px;
+}
+
+.destinations__intro .eyebrow {
+  margin-bottom: 2px;
+}
+
+.destinations__intro p:not(.eyebrow) {
+  margin-top: 8px;
+}
+
+.destination-card + .destination-card {
+  margin-top: 48px;
+}
+
+.destination-card__image {
+  width: 100%;
+  height: 350px;
+  border-radius: 28px;
+  object-fit: cover;
+}
+
+.destination-card h3 {
+  margin-top: 20px;
+}
+
+.destination-card p {
+  margin-top: 4px;
+}
+
+.tag-title {
+  font-weight: 700;
+}
+
+.tag-list {
+  margin-left: 24px;
+  font-weight: 700;
+}
+
+.tag-list__item--history {
+  color: var(--history);
+}
+
+.tag-list__item--couples {
+  color: var(--couples);
+}
+
+.tag-list__item--family {
+  color: var(--family);
+}
+
+.tag-list__item--budget {
+  color: var(--budget);
+}
+
+/* Encerramento */
+.closing {
+  text-align: center;
+}
+
+/* Rodapé */
+.footer {
+  margin: 64px 24px 48px;
+  color: var(--text-secondary);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  flex-wrap: wrap;
+  }
+
+.footer__heart {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) saturate(100%);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .page {
+    width: calc(100% - 48px);
+    margin-top: 56px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  .hero {
+    margin-bottom: 32px;
+  }
+
+  .hero__figure {
+    margin-top: 32px;
+  }
+
+  .hero__image {
+    height: 420px;
+    border-radius: 24px;
+  }
+
+  figcaption {
+    margin-top: 16px;
+  }
+
+  .divider {
+    margin: 32px 0 48px;
+  }
+
+  .destinations__intro {
+    margin-bottom: 48px;
+  }
+
+  .destination-card + .destination-card {
+    margin-top: 40px;
+  }
+
+  .destination-card__image {
+    height: 280px;
+    border-radius: 24px;
+  }
+
+  .destination-card h3 {
+    margin-top: 16px;
+  }
+
+  .footer {
+    margin: 48px 24px 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    width: calc(100% - 32px);
+    margin-top: 40px;
+  }
+
+  .eyebrow {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  h2 {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  h3 {
+    font-size: 22px;
+    line-height: 1.3;
+  }
+
+  .hero__figure {
+    margin-top: 24px;
+  }
+
+  .hero__image {
+    height: 240px;
+    border-radius: 20px;
+  }
+
+  .divider {
+    margin: 32px 0 40px;
+  }
+
+  .destinations__intro {
+    margin-bottom: 40px;
+  }
+
+  .destination-card__image {
+    height: 220px;
+    border-radius: 20px;
+  }
+
+  .tag-list {
+    margin-left: 20px;
+  }
+
+  .footer {
+    margin: 40px 16px 32px;
+  }
+}
